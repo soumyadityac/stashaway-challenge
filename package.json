@@ -1,0 +1,17 @@
+{
+  "name": "stashaway-hiring-challenge",
+  "version": "0.1.0",
+  "private": true,
+  "description": "This is my submission for the **Stashaway Frontend Hiring Challenge**",
+  "main": "webpack.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/soumyadityac/stashawayHiringChallenge.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/soumyadityac/stashawayHiringChallenge/issues"
+  },
+  "homepage": "https://github.com/soumyadityac/stashawayHiringChallenge#readme"
+}

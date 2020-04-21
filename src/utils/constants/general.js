@@ -1,10 +1,6 @@
 export const APP_PAGES = [
   {
-    label: 'Home',
-    href: '#',
-  },
-  {
-    label: 'Manage deposits',
+    label: 'Support',
     href: '#',
   },
   {
@@ -12,7 +8,11 @@ export const APP_PAGES = [
     href: '#',
   },
   {
-    label: 'Support',
+    label: 'Manage deposits',
+    href: '#',
+  },
+  {
+    label: 'Home',
     href: '#',
   },
 ];

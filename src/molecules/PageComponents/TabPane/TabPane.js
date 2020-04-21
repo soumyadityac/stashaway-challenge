@@ -21,7 +21,7 @@ class TabPane extends PureComponent {
   renderTabItem = ({ label, key }) => {
     const { selectedTabItemKey } = this.props;
     return (
-      <button className={cx(styles.tabItem, { [styles.selectedItem]: selectedTabItemKey === key })} onClick={this.handleTabItemClick(key)}>
+      <button key={key} className={cx(styles.tabItem, { [styles.selectedItem]: selectedTabItemKey === key })} onClick={this.handleTabItemClick(key)}>
         <span>{label}</span>
       </button>
     );

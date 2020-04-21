@@ -1,6 +1,11 @@
 .pageBuilderContainer {
   display: flex;
   flex-flow: column nowrap;
+  margin-top: 4.4rem;
+}
+
+.rowContainer {
+  margin-top: 1.2rem;
 }
 
 .sectionContainer {

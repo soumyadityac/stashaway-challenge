@@ -5,12 +5,26 @@
 }
 
 .tabItem {
-  margin-right: 1rem;
+  font-size: inherit;
+  padding: 0;
+  background: none;
+  outline: none;
+  border: none;
+  margin: 0 1rem 0 0;
   color: white;
   height: 2rem;
+  border-bottom: 0.4rem solid #ffffff00;
+}
+
+.tabRightItem {
+  position: absolute;
+  right: 0;
+}
+
+.tabRightItem span {
+  margin-right: 0.4rem;
 }
 
 .selectedItem {
-  height: 1.6rem;
   border-bottom: 0.4rem solid  #02b1aa;
 } 

@@ -1,8 +1,39 @@
-import { PAGE_COMPONENT_KEYS } from './stashAway.constants';
+import { createSelector } from 'reselect';
+
+import _map from 'lodash/map';
+
+import { defaultSelector } from 'utils';
+import { EMPTY_ARRAY } from 'utils/constants/app.constants';
+
+import { PAGE_COMPONENT_KEYS, TAB_PANES } from './stashAway.constants';
 
 import styles from './stashAway.css';
 
-const sections = [
+const getMainBodySections = (selectedTabItemKey) => {
+  switch (selectedTabItemKey) {
+    case TAB_PANES.OVERVIEW:
+      return [{
+        rows: [
+          {
+            columns: [PAGE_COMPONENT_KEYS.SECTION_TITLE],
+          },
+          {
+            columns: [PAGE_COMPONENT_KEYS.BENCHMARK_SELECTOR],
+          },
+          {
+            columns: [PAGE_COMPONENT_KEYS.RANGE_SELECTOR],
+          },
+          {
+            columns: [PAGE_COMPONENT_KEYS.CHART],
+          },
+        ],
+      }];
+    default:
+      return EMPTY_ARRAY;
+  }
+};
+
+const getPageSections = ({ selectedTabItemKey }) => [
   {
     className: styles.tabPaneSection,
     rows: [
@@ -11,22 +42,12 @@ const sections = [
       },
     ],
   },
-  {
-    rows: [
-      {
-        columns: [PAGE_COMPONENT_KEYS.SECTION_TITLE],
-      },
-      // {
-      //   columns: [PAGE_COMPONENT_KEYS.BENCHMARK_SELECTOR],
-      // },
-      // {
-      //   columns: [PAGE_COMPONENT_KEYS.RANGE_SELECTOR, PAGE_COMPONENT_KEYS.CURRENCY_SELECTOR],
-      // },
-      // {
-      //   columns: [PAGE_COMPONENT_KEYS.CHART],
-      // },
-    ],
-  },
+  ...getMainBodySections(selectedTabItemKey),
 ];
 
-export default sections;
+const componentKeysToPickForSections = [PAGE_COMPONENT_KEYS.TAB_PANE];
+
+export default () => createSelector(
+  _map(componentKeysToPickForSections, defaultSelector),
+  getPageSections,
+);

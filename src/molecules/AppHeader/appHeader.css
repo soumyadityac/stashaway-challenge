@@ -1,10 +1,14 @@
 .appHeader {
   display: flex;
   background-color: #082340;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
 }
 
 .logoContainer {
-  flex: 1 1 75%;
+  flex: 1 1 0;
 }
 
 .logoContainer img {

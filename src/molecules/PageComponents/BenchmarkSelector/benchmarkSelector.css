@@ -1,0 +1,42 @@
+.mainContainer {
+  display: flex;
+  flex-flow: row nowrap;
+  position: relative;
+}
+
+.compareFromContainer, .compareWithContainer {
+  flex: 1 1 0;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  padding: 3rem;
+}
+
+.compareFromContainer {
+  background-color: #f7f7f7;
+}
+
+.compareFromContainer h3 {
+  color: #0079db;
+}
+
+.compareFromContainer span {
+  color: #41566a;
+  font-weight: 500;
+}
+
+.compareWithContainer {
+  background-color: #ebecef;
+}
+
+.vsConatainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: 700;
+  color: white;
+  background-color: #0079db;
+  border-radius: 100%;
+  padding: 1rem;
+}

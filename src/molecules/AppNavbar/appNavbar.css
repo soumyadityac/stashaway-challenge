@@ -1,9 +1,9 @@
 .pageNavContainer {
-  flex: 1 1 25%;
+  flex: 1 1 0;
   display: flex;
   flex-flow: row nowrap;
+  flex-direction: row-reverse;
   align-items: center;
-  justify-content: space-evenly;
 }
 
 .pageNavContainer button {
@@ -13,4 +13,5 @@
   border: none;
   outline: none;
   color: white;
+  margin: 0 0.8rem;
 }

@@ -8,10 +8,16 @@ import _noop from 'lodash/noop';
 
 import PageTitle from 'molecules/PageTitle';
 import { EMPTY_OBJECT, EMPTY_ARRAY } from 'utils/constants/app.constants';
+import ACTION_TYPES from 'utils/constants/state.actionTypes';
 
 import styles from './pageBuilder.css';
 
 class PageBuilder extends PureComponent {
+  componentDidMount() {
+    const { onAction } = this.props;
+    onAction({ type: ACTION_TYPES.PAGE.PAGE_INIT });
+  }
+
   renderColumn = (key) => {
     const { config, componentProps, onAction } = this.props;
     if (!config[key]) throw new Error(`Config missing for ${key}`);
@@ -19,7 +25,7 @@ class PageBuilder extends PureComponent {
     const componentPropForKey = componentProps[key] || EMPTY_OBJECT;
     return (
       <React.Fragment key={key}>
-        <Component onAction={onAction} {...renderOptions} {...componentPropForKey} />
+        <Component onAction={onAction} pageComponentKey={key} {...renderOptions} {...componentPropForKey} />
       </React.Fragment>
     );
   }

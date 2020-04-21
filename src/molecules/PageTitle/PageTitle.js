@@ -1,6 +1,8 @@
 import React, { PureComponent } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+import PropTypes from 'prop-types';
+
+import Icon, { faArrowLeft } from 'atoms/Icon';
+import { EMPTY_OBJECT, EMPTY_STRING } from 'utils/constants/app.constants';
 
 import styles from './pageTitle.css';
 
@@ -9,7 +11,7 @@ class PageTitle extends PureComponent {
     const { goBackTo: { label } } = this.props;
     return (
       <button>
-        <FontAwesomeIcon icon={faArrowLeft} color="#02b1aa" />
+        <Icon icon={faArrowLeft} color="#02b1aa" />
         <span>{label}</span>
       </button>
     );
@@ -23,7 +25,6 @@ class PageTitle extends PureComponent {
   }
 
   render() {
-    const { title, goBackTo: { href, label } } = this.props;
     return (
       <div className={styles.pageTitleContainer}>
         {this.renderGoBack()}
@@ -32,5 +33,15 @@ class PageTitle extends PureComponent {
     );
   }
 }
+
+PageTitle.propTypes = {
+  goBackTo: PropTypes.object,
+  title: PropTypes.string,
+};
+
+PageTitle.defaultProps = {
+  goBackTo: EMPTY_OBJECT,
+  title: EMPTY_STRING,
+};
 
 export default PageTitle;

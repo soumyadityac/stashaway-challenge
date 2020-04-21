@@ -1,0 +1,21 @@
+.selected {
+  color: white !important;
+  background-color: #02b1aa !important;
+  border-radius: 10%;
+}
+
+.dateRangeContainer {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.dateRangeContainer button {
+  font-size: inherit;
+  font-weight: 500;
+  color: #02b1aa;
+  background: none;
+  border: 0;
+  outline: 0;
+  margin: 0 0.4rem;
+  padding: 0.1rem 0.4rem;
+}

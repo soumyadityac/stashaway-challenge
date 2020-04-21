@@ -1,5 +1,5 @@
-// import HTTP from './http';
-import HTTP from './httpFake';
+import HTTP from './http';
+// import HTTP from './httpFake';
 
 const historyCache = {};
 

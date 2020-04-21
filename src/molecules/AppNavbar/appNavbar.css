@@ -1,0 +1,16 @@
+.pageNavContainer {
+  flex: 1 1 25%;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.pageNavContainer button {
+  font-size: inherit;
+  font-weight: 700;
+  background: none;
+  border: none;
+  outline: none;
+  color: white;
+}

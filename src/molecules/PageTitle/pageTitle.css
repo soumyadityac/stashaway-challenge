@@ -1,0 +1,27 @@
+.pageTitleContainer {
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 1.2rem 2.4rem 2.4rem;
+  width: 100%;
+  background-color: #082340;
+  color: white;
+}
+
+.pageTitleContainer h1 {
+  margin: 0.4rem 0;
+}
+
+.pageTitleContainer button {
+  background: none;
+  border: none;
+  outline: none;
+  text-align: left;
+  width: 8rem;
+  font-size: inherit;
+  font-weight: 700;
+}
+
+.pageTitleContainer span {
+  margin-left: 0.4rem;
+  color: #02b1aa;
+}

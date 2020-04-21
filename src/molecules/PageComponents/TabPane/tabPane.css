@@ -1,0 +1,16 @@
+.tabPaneContainer {
+  display: flex;
+  flex-flow: row nowrap;
+  padding: 0 2.4rem;
+}
+
+.tabItem {
+  margin-right: 1rem;
+  color: white;
+  height: 2rem;
+}
+
+.selectedItem {
+  height: 1.6rem;
+  border-bottom: 0.4rem solid  #02b1aa;
+} 

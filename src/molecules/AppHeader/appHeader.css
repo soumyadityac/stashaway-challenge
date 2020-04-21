@@ -1,0 +1,14 @@
+.appHeader {
+  display: flex;
+  background-color: #082340;
+}
+
+.logoContainer {
+  flex: 1 1 75%;
+}
+
+.logoContainer img {
+  width: 12.8em;
+  height: 4.8em;
+  object-fit: cover;
+}

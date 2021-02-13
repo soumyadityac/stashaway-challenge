@@ -1,8 +1,8 @@
 
-# StashAway Hiring Challenge
+# StashAway Challenge
 
  
-This is my submission for the **Stashaway Hiring Challenge**
+This is my submission for the **Stashaway Challenge**
 
 I have hosted the app into a docker container in DigitalOcean. You may find the hosted app [here](http://stashaway-soumyaditya.uk.to/).
 
